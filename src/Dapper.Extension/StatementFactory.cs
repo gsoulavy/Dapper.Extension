@@ -17,7 +17,7 @@
             return string.Format(@"select {0} from {1} {2}", selectStatementContent, tableName, whereClause).Trim();
         }
 
-        public static string Insert<TEntity>(Dialect dialect)
+        public static string Insert<TEntity>(Dialect dialect, bool isWithIdentityInsert = false)
         {
             Kernel.SetDialect(dialect);
 
